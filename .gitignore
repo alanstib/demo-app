@@ -1,0 +1,45 @@
+node_modules/
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# macOS
+.DS_Store
+
+# development build artifacts
+build-*.tar.gz
+*.aab
+*.ipa
+*.apk
+*.app
+
+# nektos/act secrets, for running GitHub Actions locally
+.act/*
+
+# for running `eas-build` locally
+# run `doppler run -p mobile -c dev -- eas credentials` to enter the cli program and manage (create/edit/delete/download) Apple signing information
+credentials.json
+
+# Locally, we need to write to a .env file to load variables into the process to be able to use with VSCode extensions
+# For example, the `graphql.config.js` file used by various VSCode GraphQL extensions
+.env
+app_store_key.p8
+
+# yarn 3
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+yarn-error.log
+ios/*
+!ios/HypercardDev/Supporting/*

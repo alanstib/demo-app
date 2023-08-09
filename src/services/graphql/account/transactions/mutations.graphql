@@ -1,0 +1,13 @@
+mutation CreateDispute($input: CreateDisputeInput!) {
+  createDispute(input: $input) {
+    ... on MutationCreateDisputeSuccess {
+      data {
+        id
+      }
+    }
+    ... on Error {
+      code
+      message
+    }
+  }
+}

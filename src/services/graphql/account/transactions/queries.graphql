@@ -1,0 +1,83 @@
+query GetTransactions(
+  $offset: Int
+  $pageSize: Int
+  $merchantName: String
+  $filterType: [TransactionType!]
+  $transactedAfter: DateTime
+  $sort: TransactionsSortInput!
+) {
+  transactions(
+    pagination: { offset: $offset, pageSize: $pageSize }
+    includeRewards: true
+    filters: {
+      merchantName: $merchantName
+      type: $filterType
+      transactedAfter: $transactedAfter
+    }
+    sort: $sort
+  ) {
+    ... on QueryTransactionsSuccess {
+      __typename
+      data {
+        hasMore
+        nextPageOffset
+        allTransactions {
+          ... on PaymentTransaction {
+            amountInDollars
+            type
+            transactedAt
+            paymentStatus: status
+            displayTitle
+            id
+          }
+          ... on Transaction {
+            transactedAt
+            creditIndicator
+            amountInDollars
+            id
+            transactionStatus: status
+            hypercardCategoryIconUrl
+            externalMerchant {
+              displayName
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+query GetTransactionById($transactionId: Int!) {
+  transaction(transactionId: $transactionId, includeReward: true) {
+    ... on QueryTransactionSuccess {
+      data {
+        dispute {
+          status
+        }
+        creditIndicator
+        amountInDollars
+        cardLast4Digits
+        transactedAt
+        externalMerchant {
+          category {
+            name
+          }
+          displayName
+        }
+        reward {
+          cashbackReward {
+            rewardDescription
+            amount
+          }
+          pointsReward {
+            rewardDescription
+            amount
+          }
+        }
+        status
+        settledAt
+        type
+      }
+    }
+  }
+}

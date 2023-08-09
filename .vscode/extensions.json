@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "arcanis.vscode-zipfs",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "graphql.vscode-graphql",
+    "eamodio.gitlens",
+    "msjsdiag.vscode-react-native",
+    "wayou.vscode-todo-highlight",
+    "redhat.vscode-yaml",
+    "aaron-bond.better-comments",
+    "vincaslt.highlight-matching-tag",
+    "christian-kohler.path-intellisense",
+    "jasonnutter.search-node-modules",
+    "gruntfuggly.todo-tree",
+    "graphql.vscode-graphql-execution",
+    "graphql.vscode-graphql-syntax"
+  ]
+}

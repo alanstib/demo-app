@@ -1,0 +1,87 @@
+mutation SendOtp($phoneNumber: String!) {
+  sendOTP(phoneNumber: $phoneNumber) {
+    ... on MutationSendOTPSuccess {
+      data
+    }
+    ... on Error {
+      code
+      message
+    }
+  }
+}
+mutation SubmitFeedback($feedback: String!) {
+  submitFeedback(feedback: $feedback) {
+    ... on MutationSubmitFeedbackSuccess {
+      data
+    }
+    ... on Error {
+      code
+      message
+    }
+  }
+}
+
+mutation SubmitUpdateFreezeStatus($shouldFreeze: Boolean!) {
+  updateFreezeStatus(shouldFreeze: $shouldFreeze) {
+    ... on MutationUpdateFreezeStatusSuccess {
+      data
+    }
+    ... on BaseError {
+      code
+      message
+    }
+    ... on ValidationError {
+      code
+      message
+    }
+  }
+}
+
+mutation SubmitReplaceCard(
+  $newShippingAddress: UpdateCardholderAddressInput
+  $reason: CardReplacementReason!
+) {
+  replaceCard(newShippingAddress: $newShippingAddress, reason: $reason) {
+    ... on MutationReplaceCardSuccess {
+      data {
+        note
+      }
+    }
+    ... on BaseError {
+      code
+      message
+    }
+    ... on ValidationError {
+      code
+      message
+    }
+  }
+}
+
+mutation UpdateNotificationSettings($settings: NotificationSettingsInput!) {
+  updateNotificationSettings(settings: $settings) {
+    ... on MutationUpdateNotificationSettingsSuccess {
+      data {
+        promotions
+        rewards
+        transactions
+      }
+    }
+    ... on BaseError {
+      code
+      message
+    }
+    ... on ValidationError {
+      code
+      message
+    }
+  }
+}
+
+mutation UpdateUserAddress($address: UpdateCardholderAddressInput!) {
+  updateUserAddress(address: $address) {
+    ... on MutationUpdateUserAddressSuccess {
+      data
+    }
+  }
+}

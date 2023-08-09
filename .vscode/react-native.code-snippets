@@ -1,0 +1,20 @@
+{
+  "react-native_functional-component": {
+    "prefix": "rnfunc",
+    "body": "import { View } from 'react-native';\n\ntype ${TM_FILENAME_BASE}Props = {\n  \n};\n\nconst ${TM_FILENAME_BASE} = (props: ${TM_FILENAME_BASE}Props) => {\n\treturn (\n\t\t$2\n\t);\n};\n\nexport { ${TM_FILENAME_BASE} };\n\n",
+    "description": ""
+  },
+  "react-native_screen-component": {
+    "prefix": "rnscreen",
+    "body": "import { ScreenContainer } from 'components/atoms';\n\ntype ${TM_FILENAME_BASE}Props = {\n  \n};\n\nconst ${TM_FILENAME_BASE} = (props: ${TM_FILENAME_BASE}Props) => {\n\treturn (\n\t\t<ScreenContainer>\n\t\t\t$2\n\t\t</ScreenContainer>\n\t);\n};\n\nexport { ${TM_FILENAME_BASE} };\n\n",
+    "description": ""
+  },
+  "storybook-template": {
+    "prefix": "storybook-template",
+    "body": "import { ComponentMeta, ComponentStory } from '@storybook/react-native';\nimport { storybookTitles } from 'storybook';\nimport { ${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/} } from './${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/}';\n\nconst meta: ComponentMeta<typeof ${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/}> = {\n\ttitle: storybookTitles.$1,\n\tcomponent: ${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/},\n};\n\nconst ${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/}Story: ComponentStory<typeof ${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/}> = () => {\n\treturn (\n\n\t)\n}\n\n${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/}Story.storyName = '${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/}';\n\nexport default meta;\nexport { ${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/}Story };"
+  },
+  "storybook-template_multi": {
+    "prefix": "storybook-template_multi",
+    "body": "import { ComponentMeta, ComponentStory } from '@storybook/react-native';\nimport { storybookTitles } from 'storybook';\nimport { ${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/} } from './${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/}';\n\nconst meta: ComponentMeta<typeof ${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/}> = {\n\ttitle: storybookTitles.$1,\n\tcomponent: ${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/},\n\tid: '${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/}',\n};\n\nconst createStoryName = (variationType: string) => `${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/} - \\${variationType}`\n\nconst Template: ComponentStory<typeof ${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/}> = (args) => (\n\t <${TM_FILENAME_BASE/([^.]+).*/${1:/capitalize}/} {...args} />\n);\n\nconst FirstSibling = Template.bind({});\n\nFirstSibling.storyName = createStoryName('INSERT VARIATION HERE');\n\nexport default meta;\nexport { FirstSibling };"
+  }
+}

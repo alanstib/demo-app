@@ -1,0 +1,46 @@
+{
+  "cli": {
+    "version": ">= 3.3.1",
+    "appVersionSource": "remote",
+    "promptToConfigurePushNotifications": false
+  },
+  "build": {
+    "development": {
+      "channel": "dev",
+      "distribution": "internal",
+      "developmentClient": true
+    },
+    "development-simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true,
+        "resourceClass": "m-medium"
+      }
+    },
+    "dev": {
+      "autoIncrement": true,
+      "channel": "dev",
+      "distribution": "store",
+      "ios": {
+        "image": "latest",
+        "resourceClass": "m-medium"
+      }
+    },
+    "dev-adhoc": {
+      "channel": "dev",
+      "distribution": "internal"
+    }
+  },
+  "submit": {
+    "dev": {
+      "ios": {
+        "appleTeamId": "59V88Z6DR8",
+        "ascAppId": "1672486045",
+        "language": "en-US",
+        "companyName": "Hypercard",
+        "bundleIdentifier": "com.hypercard.mobile.app.dev"
+      }
+    }
+  }
+}
