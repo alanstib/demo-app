@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { Dimensions, ScrollView, Text, View } from "react-native";
+import { Dimensions, ScrollView, Text } from "react-native";
 import {
-  AspectImage,
   Body1,
   Caption,
   Header1,
@@ -169,7 +168,7 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
           </>
         )}
       </ScreenContainer>
-      {/* <TransactionsBottomSheet /> */}
+      <TransactionsBottomSheet />
     </>
   );
 };
