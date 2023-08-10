@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Icon, Header3, Touchable } from "components/atoms";
-import { HomeScreen, TransactionDetailScreen } from "screens";
+import { HomeScreen, TransactionDetailScreen, NewCardScreen } from "screens";
 import { useProfileDrawerStore } from "services/zustand";
 import { getColorValue } from "theme/utils";
 import { HomeTabStackNavigatorParamList } from "./types";
@@ -38,6 +38,7 @@ const HomeTabStackNavigator = () => {
         name={"TransactionDetailScreen"}
         component={TransactionDetailScreen}
       />
+      <Stack.Screen name={"NewCard"} component={NewCardScreen} />
       {/* <Stack.Screen
         name={"DisputeReasonsScreen"}
         component={DisputeReasonsScreen}

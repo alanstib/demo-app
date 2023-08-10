@@ -5,8 +5,8 @@ const SecondaryButton = styled(BaseButton, {
   name: "SecondaryButton",
   backgroundColor: "$white15",
   color: "$white",
-  height: 42,
-  paddingHorizontal: "$5",
+  paddingVertical: "$5",
+  paddingHorizontal: "$8",
   ellipsizeMode: undefined,
   borderRadius: "$2",
 });

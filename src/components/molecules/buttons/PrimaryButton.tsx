@@ -4,9 +4,11 @@ import { BaseButton } from "./BaseButton";
 const PrimaryButton = styled(BaseButton, {
   name: "PrimaryButton",
   backgroundColor: "$white",
-  size: "$9",
+  size: "$7",
   borderRadius: "$2",
   height: "$10",
+  justifyContent: "center",
+  alignItems: "center",
 });
 
 export { PrimaryButton };

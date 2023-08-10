@@ -24,11 +24,11 @@ type HomeTabStackNavigatorParamList = {
   LostOrStolenCardScreen: undefined;
   AddBankAccountScreen: {
     screenToNavigateToOnSuccess:
-      | keyof Pick<
-          HomeTabStackNavigatorParamList,
-          "BankAccountScreen" | "SetupAutoPayScreen"
-        >
-      | undefined;
+    | keyof Pick<
+      HomeTabStackNavigatorParamList,
+      "BankAccountScreen" | "SetupAutoPayScreen"
+    >
+    | undefined;
   };
   HomeScreen: undefined;
   TransactionDetailScreen: {
@@ -43,6 +43,7 @@ type HomeTabStackNavigatorParamList = {
   };
   DisputeFiledScreen: undefined;
   HelpCenterScreen: undefined;
+  NewCard: undefined;
 };
 
 type HomeTabStackNavigatorRouteName = keyof HomeTabStackNavigatorParamList;
