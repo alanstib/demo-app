@@ -18,6 +18,23 @@ const styles = StyleSheet.create({
     width: CARD_IMAGE_WIDTH,
     aspectRatio: CARD_IMAGE_ASPECT_RATIO,
   }),
+  cardContainer: {
+    width: WINDOW_WIDTH - 80,
+    margin: 10,
+  },
+  newCardContainer: {
+    width: WINDOW_WIDTH - 80,
+    margin: 10,
+    backgroundColor: "rgba(40, 40, 40, 0.8)",
+    borderRadius: 16,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  title: {
+    color: "#fff",
+    paddingTop: 16,
+    letterSpacing: 4,
+  },
 });
 
 export { styles, CARD_IMAGE_WIDTH, CARD_IMAGE_ASPECT_RATIO };
